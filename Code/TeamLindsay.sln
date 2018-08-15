@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamLindsay.MealPlanner.Service", "TeamLindsay.Provider\TeamLindsay.MealPlanner.Service.csproj", "{207C9716-BD7D-4601-B604-95140A55E158}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamLindsay.MealPlanner.Test", "TeamLindsay.Test\TeamLindsay.MealPlanner.Test.csproj", "{800C580F-211D-46CC-9B34-13B1443DEC14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamLindsay.Api", "TeamLindsay.Api\TeamLindsay.Api.csproj", "{19D5A3A1-B03D-41AF-8EAB-D785282EBA00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamLindsay.MealPlanner.Data", "TeamLindsay.Data\TeamLindsay.MealPlanner.Data.csproj", "{987F955D-5B75-453A-8AFC-87F976E8BE3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamLindsay.Structure", "TeamLindsay.Common\TeamLindsay.Structure.csproj", "{567924EC-30B8-4279-B7C7-C8C4126C0F93}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Framework", "00.Framework", "{2533FE0F-8CAE-4213-957D-0A651EA61756}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.MealPlanner", "01.MealPlanner", "{D752DB32-0B90-40D9-B36A-CDB6C76706AC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{207C9716-BD7D-4601-B604-95140A55E158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{207C9716-BD7D-4601-B604-95140A55E158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{207C9716-BD7D-4601-B604-95140A55E158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{207C9716-BD7D-4601-B604-95140A55E158}.Release|Any CPU.Build.0 = Release|Any CPU
+		{800C580F-211D-46CC-9B34-13B1443DEC14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{800C580F-211D-46CC-9B34-13B1443DEC14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{800C580F-211D-46CC-9B34-13B1443DEC14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{800C580F-211D-46CC-9B34-13B1443DEC14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19D5A3A1-B03D-41AF-8EAB-D785282EBA00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19D5A3A1-B03D-41AF-8EAB-D785282EBA00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19D5A3A1-B03D-41AF-8EAB-D785282EBA00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19D5A3A1-B03D-41AF-8EAB-D785282EBA00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{987F955D-5B75-453A-8AFC-87F976E8BE3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{987F955D-5B75-453A-8AFC-87F976E8BE3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{987F955D-5B75-453A-8AFC-87F976E8BE3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{987F955D-5B75-453A-8AFC-87F976E8BE3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{567924EC-30B8-4279-B7C7-C8C4126C0F93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{567924EC-30B8-4279-B7C7-C8C4126C0F93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{567924EC-30B8-4279-B7C7-C8C4126C0F93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{567924EC-30B8-4279-B7C7-C8C4126C0F93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{207C9716-BD7D-4601-B604-95140A55E158} = {D752DB32-0B90-40D9-B36A-CDB6C76706AC}
+		{800C580F-211D-46CC-9B34-13B1443DEC14} = {D752DB32-0B90-40D9-B36A-CDB6C76706AC}
+		{19D5A3A1-B03D-41AF-8EAB-D785282EBA00} = {2533FE0F-8CAE-4213-957D-0A651EA61756}
+		{987F955D-5B75-453A-8AFC-87F976E8BE3D} = {D752DB32-0B90-40D9-B36A-CDB6C76706AC}
+		{567924EC-30B8-4279-B7C7-C8C4126C0F93} = {2533FE0F-8CAE-4213-957D-0A651EA61756}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6D80920-4DC0-4CAC-9028-D5D887EC9436}
+	EndGlobalSection
+EndGlobal
