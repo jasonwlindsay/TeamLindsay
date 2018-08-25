@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeamLindsay.Common.Interface
+namespace TeamLindsay.Structure.Interface
 {
     public interface IEntity
     {

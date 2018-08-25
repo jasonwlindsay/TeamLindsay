@@ -1,10 +1,7 @@
-﻿using TeamLindsay.Common.Interface;
-
-namespace TeamLindsay.Common.Entity.MealPlanner
+﻿namespace TeamLindsay.Structure.Entity.MealPlanner
 {
-    public class MealType : IEntity
+    public class MealType : BaseEntity
     {
-        public int Id { get; set; }
         public string Name { get; set; }
     }
 }

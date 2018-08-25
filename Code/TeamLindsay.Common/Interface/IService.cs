@@ -1,4 +1,4 @@
-﻿namespace TeamLindsay.Common.Interface
+﻿namespace TeamLindsay.Structure.Interface
 {
     public interface IService
     {
