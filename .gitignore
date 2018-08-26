@@ -207,3 +207,7 @@ project.lock.json
 *.feature.cs
 *.feature.xlsx.*
 *.Specs_*.html
+*.mdf
+*.ldf
+Databases/MealPlanner/MealPlanner.mdf
+Databases/MealPlanner/MealPlanner_log.ldf
