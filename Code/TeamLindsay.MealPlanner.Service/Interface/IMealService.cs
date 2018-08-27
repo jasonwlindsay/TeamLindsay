@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using TeamLindsay.Structure.Model;
-using TeamLindsay.Structure.Entity.MealPlanner;
+using TeamLindsay.MealPlanner.Structure.Entity;
+using TeamLindsay.MealPlanner.Structure.Model;
 using TeamLindsay.Structure.Interface;
 
 namespace TeamLindsay.MealPlanner.Service.Interface
@@ -13,5 +13,6 @@ namespace TeamLindsay.MealPlanner.Service.Interface
         List<MealModel> GetMealsByDates(DateTime startDate, DateTime endDate);
         void Update(Meal entity);
         void Remove(Meal entity);
+        List<MealListView> List(MealSearch search);
     }
 }

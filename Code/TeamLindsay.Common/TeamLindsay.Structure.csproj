@@ -50,20 +50,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity\BaseEntity.cs" />
-    <Compile Include="Entity\MealPlanner\Meal.cs" />
-    <Compile Include="Entity\MealPlanner\MealRecipe.cs" />
-    <Compile Include="Entity\MealPlanner\MealType.cs" />
-    <Compile Include="Entity\MealPlanner\Recipe.cs" />
-    <Compile Include="Enum\MealTypes.cs" />
     <Compile Include="Interface\IEntity.cs" />
     <Compile Include="Interface\IModel.cs" />
     <Compile Include="Interface\IService.cs" />
     <Compile Include="Interface\IRepository.cs" />
-    <Compile Include="Model\MealModel.cs" />
+    <Compile Include="Search\BaseSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Enum\" />
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

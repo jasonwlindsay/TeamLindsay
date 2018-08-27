@@ -146,6 +146,10 @@
       <Project>{207c9716-bd7d-4601-b604-95140a55e158}</Project>
       <Name>TeamLindsay.MealPlanner.Service</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TeamLindsay.MealPlanner.Structure\TeamLindsay.MealPlanner.Structure.csproj">
+      <Project>{483f48da-19f9-456a-b918-0840b304f110}</Project>
+      <Name>TeamLindsay.MealPlanner.Structure</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

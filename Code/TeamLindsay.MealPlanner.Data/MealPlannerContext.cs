@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity;
-using TeamLindsay.Structure.Entity.MealPlanner;
+using TeamLindsay.MealPlanner.Structure.Entity;
 
 namespace TeamLindsay.MealPlanner.Service.Data
 {
@@ -12,6 +12,7 @@ namespace TeamLindsay.MealPlanner.Service.Data
         public DbSet<MealType> MealTypes { get; set; }
         public DbSet<MealRecipe> MealRecipes { get; set; }
         public DbSet<Recipe> Recipes { get; set; }
+        public DbSet<MealListView> MealListView { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -19,6 +20,7 @@ namespace TeamLindsay.MealPlanner.Service.Data
             modelBuilder.Entity<MealType>().ToTable("MealTypes", "dbo").HasKey(t => t.Id);
             modelBuilder.Entity<MealRecipe>().ToTable("MealRecipes", "dbo").HasKey(t => t.Id);
             modelBuilder.Entity<Recipe>().ToTable("Recipes", "dbo").HasKey(t => t.Id);
+            modelBuilder.Entity<MealListView>().ToTable("MealListView", "dbo");
         }
     }
 }

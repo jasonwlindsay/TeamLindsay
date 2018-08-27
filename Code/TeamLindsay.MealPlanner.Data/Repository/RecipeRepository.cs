@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TeamLindsay.MealPlanner.Data.Interface;
 using TeamLindsay.MealPlanner.Service.Data;
-using TeamLindsay.Structure.Entity.MealPlanner;
+using TeamLindsay.MealPlanner.Structure.Entity;
 
 namespace TeamLindsay.MealPlanner.Data.Repository
 {

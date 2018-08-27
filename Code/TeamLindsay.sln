@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Framework", "00.Framewor
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.MealPlanner", "01.MealPlanner", "{D752DB32-0B90-40D9-B36A-CDB6C76706AC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamLindsay.MealPlanner.Structure", "TeamLindsay.MealPlanner.Structure\TeamLindsay.MealPlanner.Structure.csproj", "{483F48DA-19F9-456A-B918-0840B304F110}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{567924EC-30B8-4279-B7C7-C8C4126C0F93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{567924EC-30B8-4279-B7C7-C8C4126C0F93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{567924EC-30B8-4279-B7C7-C8C4126C0F93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{483F48DA-19F9-456A-B918-0840B304F110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{483F48DA-19F9-456A-B918-0840B304F110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{483F48DA-19F9-456A-B918-0840B304F110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{483F48DA-19F9-456A-B918-0840B304F110}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{19D5A3A1-B03D-41AF-8EAB-D785282EBA00} = {2533FE0F-8CAE-4213-957D-0A651EA61756}
 		{987F955D-5B75-453A-8AFC-87F976E8BE3D} = {D752DB32-0B90-40D9-B36A-CDB6C76706AC}
 		{567924EC-30B8-4279-B7C7-C8C4126C0F93} = {2533FE0F-8CAE-4213-957D-0A651EA61756}
+		{483F48DA-19F9-456A-B918-0840B304F110} = {D752DB32-0B90-40D9-B36A-CDB6C76706AC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C6D80920-4DC0-4CAC-9028-D5D887EC9436}

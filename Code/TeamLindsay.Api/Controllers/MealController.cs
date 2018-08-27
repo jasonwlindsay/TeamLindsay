@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 using TeamLindsay.MealPlanner.Service.Interface;
-using TeamLindsay.Structure.Entity.MealPlanner;
+using TeamLindsay.MealPlanner.Structure.Entity;
 
 namespace TeamLindsay.Api.Controllers
 {
@@ -34,6 +33,12 @@ namespace TeamLindsay.Api.Controllers
         public void Remove(Meal entity)
         {
             _mealService.Remove(entity);
+        }
+
+        [HttpPost, Route("list/{search}")]
+        public void List (MealSearch search)
+        {
+
         }
     }
 }

@@ -44,7 +44,7 @@ insert into MealRecipes (MealId, RecipeId)
 	values (scope_identity(), @friedChicken)
 go
 
-create or alter view MealRecipeListView
+create or alter view MealListView
 as
 	select 
 		m.Id MealId,
@@ -62,4 +62,4 @@ as
 go
 
 select * 
-from MealRecipeListView
+from MealListView

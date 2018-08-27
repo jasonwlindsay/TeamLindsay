@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TeamLindsay.MealPlanner.Data.Interface;
 using TeamLindsay.MealPlanner.Service.Data;
-using TeamLindsay.Structure.Entity.MealPlanner;
+using TeamLindsay.MealPlanner.Structure.Entity;
 
 namespace TeamLindsay.MealPlanner.Data.Repository
 {
@@ -34,6 +34,13 @@ namespace TeamLindsay.MealPlanner.Data.Repository
             {
                 var results = context.Meals.Where(m => m.MealDate >= startDate && m.MealDate <= endDate).ToList();
                 return results;
+            }
+        }
+        public List<MealListView> List()
+        {
+            using (var context = Init())
+            {
+                return context.MealListView.ToList();
             }
         }
 

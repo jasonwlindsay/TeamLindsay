@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using TeamLindsay.Structure.Entity.MealPlanner;
+using TeamLindsay.MealPlanner.Structure.Entity;
 using TeamLindsay.MealPlanner.Data.Interface;
 using TeamLindsay.MealPlanner.Service.Interface;
-using TeamLindsay.Structure.Model;
+using TeamLindsay.MealPlanner.Structure.Model;
 
 namespace TeamLindsay.MealPlanner.Service
 {
@@ -56,6 +55,11 @@ namespace TeamLindsay.MealPlanner.Service
         public void Update(Meal entity)
         {
             _mealRepository.Update(entity);
+        }
+
+        public List<MealListView> List(MealSearch search)
+        {
+            return _mealRepository.List();
         }
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using TeamLindsay.MealPlanner.Data.Interface;
 using TeamLindsay.MealPlanner.Service.Interface;
-using TeamLindsay.Structure.Entity.MealPlanner;
+using TeamLindsay.MealPlanner.Structure.Entity;
 
 namespace TeamLindsay.MealPlanner.Service
 {

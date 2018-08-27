@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using TeamLindsay.Structure.Entity.MealPlanner;
+using TeamLindsay.MealPlanner.Structure.Entity;
 using TeamLindsay.Structure.Interface;
 
 namespace TeamLindsay.MealPlanner.Service.Interface

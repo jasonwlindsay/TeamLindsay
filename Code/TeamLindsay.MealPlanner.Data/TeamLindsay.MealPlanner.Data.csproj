@@ -78,6 +78,10 @@
       <Project>{567924ec-30b8-4279-b7c7-c8c4126c0f93}</Project>
       <Name>TeamLindsay.Structure</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TeamLindsay.MealPlanner.Structure\TeamLindsay.MealPlanner.Structure.csproj">
+      <Project>{483f48da-19f9-456a-b918-0840b304f110}</Project>
+      <Name>TeamLindsay.MealPlanner.Structure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -24,7 +24,7 @@ namespace TeamLindsay.Api.Controllers
 
                 return controller;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }

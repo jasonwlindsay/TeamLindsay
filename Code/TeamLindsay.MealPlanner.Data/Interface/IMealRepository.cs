@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using TeamLindsay.Structure.Entity.MealPlanner;
+using TeamLindsay.MealPlanner.Structure.Entity;
 using TeamLindsay.Structure.Interface;
 
 namespace TeamLindsay.MealPlanner.Data.Interface
@@ -12,5 +12,6 @@ namespace TeamLindsay.MealPlanner.Data.Interface
         void Remove(Meal entity);
         List<Meal> Get();
         Meal Get(int mealId);
+        List<MealListView> List();
     }
 }
