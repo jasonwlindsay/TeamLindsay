@@ -35,10 +35,10 @@ namespace TeamLindsay.Api.Controllers
             _mealService.Remove(entity);
         }
 
-        [HttpPost, Route("list/{search}")]
-        public void List (MealSearch search)
+        [HttpPost, Route("list/{search?}")]
+        public List<MealListView> List (MealSearch search)
         {
-
+            return _mealService.List(search);
         }
     }
 }

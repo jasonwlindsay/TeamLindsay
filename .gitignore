@@ -49,6 +49,10 @@ x64/
 *.log
 *.scc
 
+# Microsoft SQL Database Files
+Databases/*.mdf
+Databases/*.ldf
+
 # OS generated files #
 .DS_Store*
 Icon?
@@ -211,3 +215,6 @@ project.lock.json
 *.ldf
 Databases/MealPlanner/MealPlanner.mdf
 Databases/MealPlanner/MealPlanner_log.ldf
+*.mdf
+*.mdf
+*.ldf

@@ -20,7 +20,7 @@ namespace TeamLindsay.MealPlanner.Service.Data
             modelBuilder.Entity<MealType>().ToTable("MealTypes", "dbo").HasKey(t => t.Id);
             modelBuilder.Entity<MealRecipe>().ToTable("MealRecipes", "dbo").HasKey(t => t.Id);
             modelBuilder.Entity<Recipe>().ToTable("Recipes", "dbo").HasKey(t => t.Id);
-            modelBuilder.Entity<MealListView>().ToTable("MealListView", "dbo");
+            modelBuilder.Entity<MealListView>().ToTable("MealListView", "dbo").HasKey(ml => ml.MealId);
         }
     }
 }

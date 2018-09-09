@@ -6,6 +6,7 @@ using TeamLindsay.MealPlanner.Service.Interface;
 using TeamLindsay.MealPlanner.Structure.Model;
 using LinqKit;
 using System.Linq;
+using TeamLindsay.Structure.Enum;
 
 namespace TeamLindsay.MealPlanner.Service
 {
@@ -61,6 +62,16 @@ namespace TeamLindsay.MealPlanner.Service
 
         public List<MealListView> List(MealSearch search)
         {
+            if (search == null)
+            {
+                // default search values
+                search = new MealSearch
+                {
+                    StartDate = DateTime.Today,
+                    EndDate = DateTime.Today.AddDays(7),
+                    MealTypeIds = new List<int> { (int)MealTypes.Breakfast, (int)MealTypes.Dinner }
+                };
+            }
             var predicate = PredicateBuilder.New<MealListView>(true);
 
             if (search.StartDate != null)
