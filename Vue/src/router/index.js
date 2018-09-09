@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/components/pages/Index'
-import Details from '@/components/pages/Details'
+import Meals from '@/components/pages/Meals'
+import Recipes from '@/components/pages/Recipes'
 Vue.use(Router)
 
 export default new Router({
@@ -9,13 +9,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Index',
-      component: Index
+      name: 'Meals',
+      component: Meals
     },
     {
-      path: '/details',
-      name: 'Details',
-      component: Details
+      path: '/recipes',
+      name: 'Recipes',
+      component: Recipes
     }
   ]
 })
