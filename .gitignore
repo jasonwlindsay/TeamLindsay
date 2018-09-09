@@ -154,9 +154,9 @@ UpgradeLog*.htm
 *.orig
 
 # SQL Server files
-**/App_Data/*.mdf
-**/App_Data/*.ldf
-**/App_Data/*.sdf
+*.mdf
+*.ldf
+*.sdf
 
 
 #LightSwitch generated files
@@ -211,10 +211,3 @@ project.lock.json
 *.feature.cs
 *.feature.xlsx.*
 *.Specs_*.html
-*.mdf
-*.ldf
-Databases/MealPlanner/MealPlanner.mdf
-Databases/MealPlanner/MealPlanner_log.ldf
-*.mdf
-*.mdf
-*.ldf
