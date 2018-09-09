@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using TeamLindsay.MealPlanner.Structure.Entity;
 using TeamLindsay.Structure.Interface;
 
@@ -12,6 +13,6 @@ namespace TeamLindsay.MealPlanner.Data.Interface
         void Remove(Meal entity);
         List<Meal> Get();
         Meal Get(int mealId);
-        List<MealListView> List();
+        List<MealListView> List(Expression<Func<MealListView, bool>> predicate);
     }
 }

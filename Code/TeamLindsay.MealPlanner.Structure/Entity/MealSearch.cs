@@ -8,7 +8,7 @@ namespace TeamLindsay.MealPlanner.Structure.Entity
     {
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public int? RecipeID { get; set; }
+        public List<int> RecipeIds { get; set; }
         public List<int> MealTypeIds { get; set; }
 
         public MealSearch()

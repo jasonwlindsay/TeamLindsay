@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using TeamLindsay.MealPlanner.Data.Interface;
 using TeamLindsay.MealPlanner.Service.Data;
 using TeamLindsay.MealPlanner.Structure.Entity;
@@ -36,11 +37,14 @@ namespace TeamLindsay.MealPlanner.Data.Repository
                 return results;
             }
         }
-        public List<MealListView> List()
+
+        public List<MealListView> List(Expression<Func<MealListView, bool>> predicate)
         {
             using (var context = Init())
             {
-                return context.MealListView.ToList();
+                return context.MealListView
+                    .Where(predicate)
+                    .ToList();
             }
         }
 

@@ -4,6 +4,8 @@ using TeamLindsay.MealPlanner.Structure.Entity;
 using TeamLindsay.MealPlanner.Data.Interface;
 using TeamLindsay.MealPlanner.Service.Interface;
 using TeamLindsay.MealPlanner.Structure.Model;
+using LinqKit;
+using System.Linq;
 
 namespace TeamLindsay.MealPlanner.Service
 {
@@ -59,7 +61,29 @@ namespace TeamLindsay.MealPlanner.Service
 
         public List<MealListView> List(MealSearch search)
         {
-            return _mealRepository.List();
+            var predicate = PredicateBuilder.New<MealListView>(true);
+
+            if (search.StartDate != null)
+            {
+                predicate.And(s => s.MealDate >= search.StartDate);
+            }
+
+            if (search.EndDate != null)
+            {
+                predicate.And(s => s.MealDate <= search.EndDate);
+            }
+
+            if (search.RecipeIds != null && search.RecipeIds.Any())
+            {
+                predicate.And(s => search.RecipeIds.Contains(s.RecipeId));
+            }
+
+            if (search.MealTypeIds != null && search.MealTypeIds.Any())
+            {
+                predicate.And(s => search.MealTypeIds.Contains(s.MealTypeId));
+            }
+
+            return _mealRepository.List(predicate);
         }
     }
 }
