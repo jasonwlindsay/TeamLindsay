@@ -1,30 +1,34 @@
+import api from '../utils/api.js'
 import * as types from '../mutation-types/mealMutation'
-import { resolve } from 'path';
+// import Vue from 'vue'
 
 const state = {
-  mealList: []
+  mealListResults: [],
+  mealListSearch: {}
 }
 
 const getters = {
-  mealList: state => state.mealList
+  mealListResults: state => state.mealListResults,
+  mealListSearch: state => state.mealListSearch
 }
 
 const actions = {
   [types.LIST_MEALS] ({ commit }, search) {
-    return new Promise((resolve, reject) => {
-      this.$http.post('/meals/v1/list', search)
-        .then(function(response) {
-          commit(types.LIST_MEALS, search)
-        })
-    }).then(() => {
-      resolve()
-    })
+    console.log('inside LIST_MEALS')
+    return api.post('http://localhost:56841/meals/v1/list', search)
+      .then(function (response) {
+        commit(types.UPDATE_SEARCH, response.data.Search)
+        commit(types.LIST_MEALS, response.data.Results)
+      })
   }
 }
 
 const mutations = {
-  [types.LIST_MEALS] (state, search) {
-    state.mealList = search
+  [types.LIST_MEALS] (state, results) {
+    state.mealListResults = results
+  },
+  [types.UPDATE_SEARCH] (state, search) {
+    state.mealListSearch = search
   }
 }
 

@@ -28,6 +28,15 @@ namespace TeamLindsay.MealPlanner.Data.Repository
             }
         }
 
+        public List<Recipe> Get(List<int> recipeIds)
+        {
+            using (var context = Init())
+            {
+                return context.Recipes
+                    .Where(mr => recipeIds.Contains(mr.Id)).ToList();
+            }
+        }
+
         public List<Recipe> GetRecipesForMeal(int mealId)
         {
             using (var context = Init())

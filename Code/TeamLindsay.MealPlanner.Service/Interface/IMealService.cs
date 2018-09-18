@@ -13,6 +13,6 @@ namespace TeamLindsay.MealPlanner.Service.Interface
         List<MealModel> GetMealsByDates(DateTime startDate, DateTime endDate);
         void Update(Meal entity);
         void Remove(Meal entity);
-        List<MealListView> List(MealSearch search);
+        MealListResponse List(MealSearch search);
     }
 }

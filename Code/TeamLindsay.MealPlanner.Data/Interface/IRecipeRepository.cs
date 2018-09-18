@@ -11,5 +11,6 @@ namespace TeamLindsay.MealPlanner.Data.Interface
         void Remove(Recipe entity);
         void Update(Recipe entity);
         List<Recipe> GetRecipesForMeal(int mealId);
+        List<Recipe> Get(List<int> recipeIds);
     }
 }

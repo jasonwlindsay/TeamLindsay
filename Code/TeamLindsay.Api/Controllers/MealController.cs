@@ -36,7 +36,7 @@ namespace TeamLindsay.Api.Controllers
         }
 
         [HttpPost, Route("list/{search?}")]
-        public List<MealListView> List (MealSearch search)
+        public MealListResponse List (MealSearch search)
         {
             return _mealService.List(search);
         }

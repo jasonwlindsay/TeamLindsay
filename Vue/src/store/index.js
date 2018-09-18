@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 
 // modules
 import App from './modules/appStore'
+import Meals from './modules/mealStore'
 
 // wireup
 Vue.use(Vuex)
@@ -13,7 +14,8 @@ var state = {}
 export default new Vuex.Store({
   state,
   modules: {
-    App
+    App,
+    Meals
   },
   strict: debug
 })

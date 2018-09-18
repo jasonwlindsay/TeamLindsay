@@ -60,7 +60,7 @@ namespace TeamLindsay.MealPlanner.Service
             _mealRepository.Update(entity);
         }
 
-        public List<MealListView> List(MealSearch search)
+        public MealListResponse List(MealSearch search)
         {
             if (search == null)
             {
@@ -94,7 +94,12 @@ namespace TeamLindsay.MealPlanner.Service
                 predicate.And(s => search.MealTypeIds.Contains(s.MealTypeId));
             }
 
-            return _mealRepository.List(predicate);
+            var results = _mealRepository.List(predicate);
+            return new MealListResponse
+            {
+                Results = results,
+                Search = search
+            };
         }
     }
 }

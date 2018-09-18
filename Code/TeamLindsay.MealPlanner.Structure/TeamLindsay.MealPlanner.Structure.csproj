@@ -41,12 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity\Meal.cs" />
+    <Compile Include="Entity\MealListResponse.cs" />
     <Compile Include="Entity\MealListView.cs" />
     <Compile Include="Entity\MealRecipe.cs" />
     <Compile Include="Entity\MealSearch.cs" />
     <Compile Include="Entity\MealType.cs" />
     <Compile Include="Entity\Recipe.cs" />
     <Compile Include="Enum\MealTypes.cs" />
+    <Compile Include="Model\MealListModel.cs" />
     <Compile Include="Model\MealModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
