@@ -36,7 +36,7 @@ insert into Recipes (Name, Ingredients, Instructions)
 	values ('Broccoli and Penne Chicken', 'Chicken, Broccoli, Penne Pasta, Mayo', 'Cook it up')
 
 
-declare @daysIncrement int = 7
+declare @daysIncrement int = 10	
 declare @startDate datetime = getdate()
 declare @endDate datetime = dateadd(day, @daysIncrement, @startDate)
 

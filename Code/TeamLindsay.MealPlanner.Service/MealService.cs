@@ -62,36 +62,19 @@ namespace TeamLindsay.MealPlanner.Service
 
         public MealListResponse List(MealSearch search)
         {
-            if (search == null)
-            {
-                // default search values
-                search = new MealSearch
-                {
-                    StartDate = DateTime.Today,
-                    EndDate = DateTime.Today.AddDays(7),
-                    MealTypeIds = new List<int> { (int)MealTypes.Breakfast, (int)MealTypes.Dinner }
-                };
-            }
-            var predicate = PredicateBuilder.New<MealListView>(true);
+            // populate partial searches with default data
+            search = search ?? new MealSearch();
+            search.MealTypeIds = search.MealTypeIds ?? new List<int> { (int)MealTypes.Breakfast, (int)MealTypes.Dinner };
+            search.StartDate = search.StartDate == null ? DateTime.Today : search.StartDate;
+            search.EndDate = search.EndDate == null ? DateTime.Today.AddDays(7) : search.EndDate;
 
-            if (search.StartDate != null)
-            {
-                predicate.And(s => s.MealDate >= search.StartDate);
-            }
-
-            if (search.EndDate != null)
-            {
-                predicate.And(s => s.MealDate <= search.EndDate);
-            }
+            var predicate = PredicateBuilder.New<MealListView>(s => s.MealDate >= search.StartDate);
+            predicate.And(s => s.MealDate <= search.EndDate);
+            predicate.And(s => search.MealTypeIds.Contains(s.MealTypeId));
 
             if (search.RecipeIds != null && search.RecipeIds.Any())
             {
                 predicate.And(s => search.RecipeIds.Contains(s.RecipeId));
-            }
-
-            if (search.MealTypeIds != null && search.MealTypeIds.Any())
-            {
-                predicate.And(s => search.MealTypeIds.Contains(s.MealTypeId));
             }
 
             var results = _mealRepository.List(predicate);
