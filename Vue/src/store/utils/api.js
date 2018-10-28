@@ -1,13 +1,12 @@
 // resources/assets/js/vuex/utils/api.js
 import axios from 'axios'
 // import Vue from 'vue'
-let corsURL = 'http://localhost:56841'
+let baseUrl = 'http://localhost:56841'
 const baseApi = axios.create({
-  baseURL: corsURL,
+  baseURL: baseUrl,
   headers: {
     'Content-Type': 'application/json',
-    'Accept': 'application/json',
-    'Access-Control-Allow-Origin': true
+    'Accept': 'application/json'
   }
 })
 
@@ -18,6 +17,8 @@ export default {
       .catch((error) => Promise.reject(error))
   },
   post (url, request) {
+    console.log('inside API POST')
+    console.log(request)
     return baseApi.post(url, request)
       .then((response) => Promise.resolve(response))
       .catch((error) => Promise.reject(error))

@@ -13,7 +13,6 @@ namespace TeamLindsay.Api
         {
             config.MapHttpAttributeRoutes(new CustomDirectoryRouteProvider());
             config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new System.Net.Http.Headers.MediaTypeHeaderValue("text/html"));
-            //config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
         }
     }
 
