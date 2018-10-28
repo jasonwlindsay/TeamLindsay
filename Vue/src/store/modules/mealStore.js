@@ -19,7 +19,8 @@ const actions = {
   },
   [types.LIST_MEALS] ({ commit }) {
     console.log('inside LIST_MEALS Action')
-    return api.post('http://localhost:56841/meals/v1/list', { search: getters.mealListSearch })
+    console.log(state.mealListSearch)
+    return api.post('http://localhost:56841/meals/v1/list', { search: state.mealListSearch })
       .then(function (response) {
         commit(types.UPDATE_SEARCH, response.data.Search)
         commit(types.UPDATE_MEAL_RESULTS, response.data.Results)

@@ -1,13 +1,8 @@
-﻿using Castle.MicroKernel.Registration;
-using Castle.Windsor;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Cors;
 using System.Web.Http.Routing;
-using TeamLindsay.Structure.Interface;
 #pragma warning disable 1591
 
 namespace TeamLindsay.Api
@@ -18,6 +13,7 @@ namespace TeamLindsay.Api
         {
             config.MapHttpAttributeRoutes(new CustomDirectoryRouteProvider());
             config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new System.Net.Http.Headers.MediaTypeHeaderValue("text/html"));
+            //config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
         }
     }
 

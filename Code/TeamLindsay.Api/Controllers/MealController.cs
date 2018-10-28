@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using TeamLindsay.MealPlanner.Service.Interface;
 using TeamLindsay.MealPlanner.Structure.Entity;
 
