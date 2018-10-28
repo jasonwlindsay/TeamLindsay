@@ -17,8 +17,6 @@ export default {
       .catch((error) => Promise.reject(error))
   },
   post (url, request) {
-    console.log('inside API POST')
-    console.log(request)
     return baseApi.post(url, request)
       .then((response) => Promise.resolve(response))
       .catch((error) => Promise.reject(error))

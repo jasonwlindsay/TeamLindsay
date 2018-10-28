@@ -65,7 +65,6 @@ export default {
   },
   methods: {
     searchList () {
-      console.log('inside LIST_MEALS method')
       this.$store.dispatch(types.LIST_MEALS)
     }
   },
